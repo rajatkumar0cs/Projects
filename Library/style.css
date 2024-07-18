@@ -1,0 +1,223 @@
+  *{
+     margin: 0;
+     padding: 0;
+  }
+
+  html,body
+  {
+    font-size: 16px;
+    font-family: Roboto, serif;
+    background-image:linear-gradient(to right, #89CFF3, #A0E9FF, #CDF5FD);
+    width:100vw;
+    height: 100vh;
+    overflow-x: hidden;
+   
+  }
+  
+  .container{  
+    display: -ms-grid;  
+    display: grid;
+    -ms-grid-rows: 1fr 5fr 1fr;
+    grid-template-rows: 1fr  5fr 1fr;
+    grid-template-columns: auto;
+    /* border: 1px solid black; */
+    /* width: 100%;
+    height: 100%; */
+
+  }
+
+  /*-------------------------------Header--------------------------*/
+ 
+  .header{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+   /* line-height: 0%; */
+    border-bottom: 3px solid black;
+  }
+
+  .header>.left-top{
+    margin-right: 20%;
+  }
+
+  .header>.middle{
+    margin-right: 25%;
+  }
+
+
+  .Hlogo{
+    height: 80px;
+    padding: 10px;
+  }
+  
+  .left-top{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .left-top-title{
+  
+    font-family: 'Bangers';
+    font-size: 22px;
+  }
+
+  .left-top-title>h2{
+    color: hsl(0, 64%, 25%);
+  }
+  
+  .middle{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* border: 1px solid black; */
+  
+  }
+
+  .right-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /*------------------Main----------------*/
+
+ .main-content{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 0.3fr 5fr;
+  grid-gap: 3%;
+  row-gap: 1px;
+  /*grid-area: inherit;*/
+  width:auto;
+  height:100%;
+  /* border: 1px solid black; */
+  margin: 10px;
+ }
+
+ #card{
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid black; */
+ /* display: flex;
+  justify-content: center;
+  align-items: center;*/
+  margin: 0 20px 10px 20px;
+ }
+
+.heading{
+ /* border: 2px solid black; */
+  width: 100%;
+  margin: 10px 20px 0 20px;
+  font-size: 16px;
+
+}
+/*---------Button--------------*/
+
+.button{
+  display: flex;
+  /* border: 1px solid black; */
+  margin: 10px;
+  align-items: center;
+}
+
+.button> #finishedBtn{
+  margin-left: 5%;
+  margin-right: 10%;
+  margin-top: 0%;
+}
+
+.button> #readBtn{
+  margin-right: 8%;
+  margin-left: 5%;
+}
+
+.button> #readBtn > .btn-add{
+  margin-left: 30%;
+  margin-bottom: 10px;
+}
+
+.button> #futureBtn > .btn-add{
+  margin-left: 30%;
+  margin-bottom: 10px;
+}
+
+
+
+/*---------BookShelf--------------*/
+.bookshelf {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* width: 300px;  */
+}
+
+.shelf1,
+.shelf2,
+.display1
+ {
+  flex: 1;
+  border: 2px solid black;
+  /* background-color: red; */
+  /* height: 25%; */
+  border-bottom-left-radius: 10px; /* Adjust the value as needed */
+  border-bottom-right-radius: 10px; /* Adjust the value as needed */
+}
+/* .shelf1,
+.shelf2 {
+  border-bottom: 2px solid black;
+  border-top: 1px solid black;
+} */
+
+.shelf1, .shelf2{
+  display: flex;
+  gap : 0.5px;
+  
+ 
+}
+.shelf1 img{
+  width: 9.5%;
+  height: 80%;
+  /* object-fit: ; */
+  cursor: pointer;
+  margin-top: 25px;
+  /* margin-left: 5px; */
+  align-items: baseline;
+  align-content: baseline;
+  transition: all ease 0.3s;
+  border-radius: 10px;
+  border: 1px solid white;
+
+}
+.shelf1 img:hover{
+  height: 100%;
+  margin-top: 0%;
+}
+
+.shelf2 img{
+  width: 9.5%;
+  height: 80%;
+  /* object-fit: ; */
+  cursor: pointer;
+  margin-top: 25px;
+  /* margin-left: 5px; */
+  align-items: baseline;
+  align-content: baseline;
+  transition: all ease 0.3s;
+  border-radius: 10px;
+  
+  border: 1px solid white;
+
+}
+
+.shelf2 img:hover{
+  height: 100%;
+  margin-top: 0%;
+}
+
+/* Displaying book */
+
+.finished> .bookshelf> .shelf2 > #two {
+ 
+  visibility: hidden;
+}
